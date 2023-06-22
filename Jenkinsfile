@@ -14,7 +14,7 @@ pipeline {
             steps {
                 script {
                     // Push the Docker image to Docker Hub
-                    docker.withRegistry('https://hub.docker.com/', 'Docker_Login') {
+                    docker.withRegistry('https://hub.docker.com/repository/docker/balesh123/fibo/general', 'Docker_Login') {
                         dockerImage.push()
                     }
                 }
